@@ -9,6 +9,11 @@
         <img src="images/bakery-logo.png" alt="North Star Bakery logo, a star over a wheat stalk">
         <h1>Our Products</h1>
     </header>
+    <div id="favorites-section" style="background-color: #fdfbf7; padding: 15px; border-bottom: 2px solid #3E2723; text-align: center;">
+    <h3>Your Favorite Items</h3>
+    <ul id="favorites-list" style="list-style: none; padding: 0; color: #D84315; font-weight: bold;"></ul>
+    <button onclick="clearFavorites()" style="margin-top: 10px;">Clear Favorites</button>
+</div>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -23,11 +28,11 @@
             <p>Sourdough, whole wheat, and rye loaves baked fresh daily. Prices range from $6 to $9.</p>
             <img src="images/bakery-bread.png" alt="Assorted fresh bread loaves cooling on a wire rack">
         </section>
-        <section>
+        <button onclick="addToFavorites('Fresh Sourdough Loaf')">Add Sourdough to Favorites</button>
             <h2>Pastries</h2>
             <p>Croissants, danishes, and muffins made in small batches each morning. Prices range from $3 to $5.</p>
         </section>
-        <section>
+        <button onclick="addToFavorites('Croissants, danishes, and muffins')">Add Sourdough to Favorites</button>
             <h2>Cakes</h2>
             <p>Custom celebration cakes for birthdays and events, available by pre order. Prices range from $25 to $60 depending on size.</p>
             <figure>
@@ -35,7 +40,7 @@
                 <figcaption>Our Signature Loaf, hand scored and baked fresh every morning.</figcaption>
             </figure>
         </section>
-        <section>
+        <button onclick="addToFavorites('Cakes')">Add Sourdough to Favorites</button>
             <h2>Storefront</h2>
             <img src="images/bakery-storefront.png" alt="North Star Bakery storefront with large front windows and outdoor seating">
         </section>
@@ -43,5 +48,6 @@
     <footer>
         <p>&copy; 2026 North Star Bakery. 214 Maple Street.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
