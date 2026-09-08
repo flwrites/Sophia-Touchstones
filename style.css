@@ -1,0 +1,84 @@
+/* 1. Global Styles (Fonts and Background Colors) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FDFBF7; /* Warm off-white */
+    color: #3E2723; /* Dark brown for readable text */
+    line-height: 1.6;
+}
+
+h1, h2, h3, legend {
+    font-family: Georgia, serif;
+    color: #3E2723;
+}
+
+/* 2. Navigation Menu Styles */
+nav ul {
+    background-color: #3E2723;
+    padding: 15px;
+    list-style-type: none;
+}
+
+nav a {
+    color: #FDFBF7;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+nav a:hover {
+    color: #D84315; /* Burnt orange highlight when hovering */
+}
+
+/* 3. Form and Button Styles */
+button {
+    background-color: #D84315;
+    color: #FFFFFF;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+
+fieldset {
+    border: 2px solid #3E2723;
+    padding: 15px;
+}
+/* 4. Mobile-First Layout (Flexbox) */
+/* By default, elements stack vertically for small mobile screens */
+nav ul {
+    display: flex;
+    flex-direction: column; /* Stacks navigation links vertically */
+    align-items: center;
+    gap: 15px;
+}
+
+main {
+    display: flex;
+    flex-direction: column; /* Stacks main content sections vertically */
+    gap: 20px;
+    padding: 20px;
+}
+
+img, picture, video, audio {
+    max-width: 100%; /* Ensures media never stretches past the screen width */
+    height: auto;
+}
+
+/* 5. Desktop Layout (Media Query for larger screens) */
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row; /* Puts navigation links side-by-side on desktop */
+        justify-content: center;
+    }
+
+    main {
+        flex-direction: row; 
+        flex-wrap: wrap; /* Allows main sections to sit next to each other */
+        justify-content: space-between;
+    }
+
+    section {
+        flex: 1 1 45%; /* Makes each section take up about half the screen width on desktop */
+        box-sizing: border-box;
+    }
+}
